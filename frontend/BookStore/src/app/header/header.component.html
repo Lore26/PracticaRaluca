@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.component.css">
+    <title>Your Website</title>
+</head>
+<body>
+    <header >
+        <div class="main-header">
+            <div class="left-side">
+                <a href="#" class="home-link">BookStore</a>
+            </div>
+            <div class="middle">
+                <input type="text" placeholder="Search" class="search-bar">
+            </div>
+            <div class="right-side">
+                <div class="user-dropdown">
+                    <button class="user-btn"><img alt="User" src="https://cdn4.libris.ro/images/svg/header/user-icon.svg"></button>
+                    <div class="user-dropdown-content">
+                        <ul class="list-group">
+                            <li class="user-list"><a href="#">Sign In</a></li>
+                            <li class="user-list"><a href="#">Sign Up</a></li>                         
+                        </ul>                      
+                    </div>
+                </div>
+                <a href="#" class="wishlist"><img alt="Wishlist" src="https://cdn4.libris.ro/images/svg/header/white-wishlist-icon.svg"> </a>
+                <a href="#" class="cart"><img alt="Cart" src="https://cdn4.libris.ro/images/svg/header/card-icon.svg"></a>
+            </div> 
+        </div>
+        <div class="navbar">
+            <a routerLink="/books" routerLinkActive="active" ariaCurrentWhenActive="page">Books</a>
+            <div class="dropdown">
+              <button class="dropbtn">Categories<i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content">
+                <ul class="list-group" *ngFor="let category of categories">
+                    <li class="menu-category"> <a href="#">{{category.category_name}}</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+    </header>   
+</body>
+</html>

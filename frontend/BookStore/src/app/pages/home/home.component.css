@@ -1,0 +1,13 @@
+.container {
+    width: max-content;
+    margin:auto;
+}
+.title {
+    width: max-content;
+    margin:auto;
+    padding:3%;
+}
+img {
+    width: 250px;
+    height: 350px;
+}
