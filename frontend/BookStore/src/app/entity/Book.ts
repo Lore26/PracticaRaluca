@@ -6,6 +6,6 @@ export class Book {
     page_number!: number;
     description!: string;
     availability!: number;
-    release_date!: Date;
-    review_id!: number;
+    release_date!: string;
+    review_id!: number | null;
 }

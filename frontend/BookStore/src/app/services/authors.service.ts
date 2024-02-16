@@ -2,15 +2,20 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Author } from '../entity/Author';
 import { Observable } from 'rxjs';
+import { ApiService } from './http/api.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthorsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private apiService: ApiService) { }
 
   getAuthors(): Observable<Author[]>{
-    return this.http.get<Author[]>("https://localhost:7114/GetAuthors");  
+    return this.apiService.get(['GetAuthors']);  
+  }
+  addAuthor(author: Author): Observable<any> {
+    console.log("author");
+    return this.apiService.post(['AddAuthor'], author);
   }
 }
